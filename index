@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> CheatOptimizer</title>
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo-cheat.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1920&q=80");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        /* Títulos com cores personalizadas */
+        .hero-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: white
+        }
+
+        .box h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #0026ff
+        }
+
+        .hero p {
+            margin-top: 15px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75), #0026ff);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+            .btn:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .box {
+            background: rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .plan {
+            background: rgba(0,0,0,0.6);
+            padding: 35px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #222;
+        }
+
+            .plan h3 {
+                font-size: 24px;
+                margin-bottom: 15px;
+                color: #ffffff
+            }
+
+            .plan ul {
+                list-style: none;
+                margin: 25px 0;
+            }
+
+                .plan ul li {
+                    margin: 10px 0;
+                    color: #cfcfcf;
+                }
+
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1 class="hero-title">Otimização de PC Gamer</h1>
+        <p>Mais FPS, menos input lag e desempenho máximo para seus jogos.</p>
+        <a href="https://discord.gg/nkyXaTkxuz" class="btn">Quero otimizar</a>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">O que fazemos</h2>
+        <div class="features">
+            <div class="box">
+                <h3>Windows Otimizado</h3>
+                <p>Ajustes avançados no sistema para desempenho máximo.</p>
+            </div>
+            <div class="box">
+                <h3>Menos Input Lag</h3>
+                <p>Redução de latência e resposta mais rápida nos jogos.</p>
+            </div>
+            <div class="box">
+                <h3>Configuração Completa</h3>
+                <p>Drivers, BIOS e ajustes finos para melhor performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <h2 class="section-title">Planos de Otimização</h2>
+        <div class="plans">
+            <div class="plan">
+                <h3>Básico</h3>
+                <ul>
+                    <li>✅Otimização do Windows</li>
+                    <li>✅Drivers atualizados</li>
+                    <li>✅Ajustes de desempenho</li>
+                </ul>
+                <a href="https://discord.gg/nkyXaTkxuz" class="btn">Quero otimizar</a>
+            </div>
+
+            <div class="plan">
+                <h3>Avançado</h3>
+                <ul>
+                    <li>✅Tudo do Básico</li>
+                    <li>✅Ajustes de BIOS</li>
+                    <li>✅Redução de latência</li>
+                </ul>
+                <a href="https://discord.gg/nkyXaTkxuz" class="btn">Quero otimizar</a>
+            </div>
+
+            <div class="plan">
+                <h3>Premium</h3>
+                <ul>
+                    <li>✅Tudo do Avançado</li>
+                    <li>✅Ajustes personalizados</li>
+                    <li>✅Suporte pós-otimização</li>
+                </ul>
+                <a href="https://discord.gg/nkyXaTkxuz" class="btn">Quero otimizar</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Resultados podem variar conforme hardware e configurações.</p>
+        <p>Contato exclusivamente via Discord.</p>
+    </footer>
+
+</body>
+</html>
