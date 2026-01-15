@@ -119,6 +119,7 @@
             border-radius: 45px;
             text-align: center;
             border: 1px solid #222;
+            position: relative;
             transition: 0.3s;
         }
 
@@ -159,6 +160,19 @@
             font-size: 14px;
         }
 
+        .plan .most-sold {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75), #ff6600);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
         .footer {
             text-align: center;
             margin-top: 80px;
@@ -196,22 +210,32 @@
         </div>
     </section>
 
-    <!-- Plano Único -->
+    <!-- Planos -->
     <section class="section container">
-        <h2 class="section-title"></h2>
+        <h2 class="section-title">Planos de Otimização</h2>
         <div class="plans">
+
+            <!-- Plano Básico -->
             <div class="plan">
-                <span class="highlight">OTIMIZAÇÃO COMPLETA</span>
-                <h3></h3>
+                <span class="highlight">BÁSICO</span>
                 <ul>
                     <li>✅ Otimização do Windows</li>
                     <li>✅ Drivers atualizados</li>
-                    <li>✅ Ajustes de desempenho em jogos</li>
-                    <li>✅ Ajustes na BIOS</li>
-                    <li>✅ Overclock Seguro</li>
                     <li>✅ Redução avançada de latência</li>
+                    <li>✅ Ajustes de desempenho em jogos</li>
+                </ul>
+                <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
+            </div>
+
+            <!-- Plano Premium -->
+            <div class="plan">
+                <span class="highlight">PREMIUM</span>
+                <span class="most-sold">⭐ Mais Vendido</span>
+                <ul>
+                    <li>✅ Tudo do Avançado</li>
+                    <li>✅ Overclock seguro</li>
+                    <li>✅ Ajustes na BIOS</li>
                     <li>✅ Maior Vida útil dos componentes</li>
-                    <li>✅ Suporte pós-otimização</li>
                 </ul>
                 <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
             </div>
