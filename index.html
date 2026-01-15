@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> CheatOptimizer</title>
+    <title>CheatOptimizer</title>
 
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -43,24 +43,10 @@
             padding: 80px 20px;
         }
 
-        /* Títulos com cores personalizadas */
         .hero-title {
-            font-size: 42px;
+            font-size: 50px;
             font-weight: 700;
-            color: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: white
-        }
-
-        .box h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-            color: #0026ff
+            color: #ffffff
         }
 
         .hero p {
@@ -85,6 +71,13 @@
                 opacity: 0.9;
             }
 
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -96,7 +89,23 @@
             padding: 30px;
             border-radius: 12px;
             text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
+
+            .box:hover {
+                transform: translateY(-5px);
+                border: 2px solid #0026ff;
+            }
+
+            .box h3 {
+                margin-bottom: 15px;
+                font-size: 22px;
+                color: #0026ff;
+            }
+
+            .box p {
+                color: #cfcfcf;
+            }
 
         .plans {
             display: grid;
@@ -107,26 +116,48 @@
         .plan {
             background: rgba(0,0,0,0.6);
             padding: 35px;
-            border-radius: 14px;
+            border-radius: 45px;
             text-align: center;
             border: 1px solid #222;
+            transition: 0.3s;
         }
+
+            .plan:hover {
+                transform: translateY(-5px);
+                border-color: #0026ff;
+            }
 
             .plan h3 {
                 font-size: 24px;
                 margin-bottom: 15px;
-                color: #ffffff
+                color: #ffffff;
             }
 
-            .plan ul {
-                list-style: none;
-                margin: 25px 0;
+        .plan-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0026ff;
+            margin-bottom: 20px;
+        }
+
+        .plan ul {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+            .plan ul li {
+                margin: 10px 0;
+                color: #cfcfcf;
             }
 
-                .plan ul li {
-                    margin: 10px 0;
-                    color: #cfcfcf;
-                }
+        .plan .highlight {
+            background: linear-gradient(135deg, rgba(0,0,0,0.75), #0026ff);
+            color: rgba(0,0,0,0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
 
         .footer {
             text-align: center;
@@ -139,68 +170,57 @@
 </head>
 <body>
 
+    <!-- Hero -->
     <section class="hero">
-        <h1 class="hero-title">Otimização de PC Gamer</h1>
+        <h1 class="hero-title">CheatOptimizer</h1>
         <p>Mais FPS, menos input lag e desempenho máximo para seus jogos.</p>
         <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
     </section>
 
+    <!-- Benefícios -->
     <section class="section container">
         <h2 class="section-title">O que fazemos</h2>
         <div class="features">
             <div class="box">
-                <h3>Windows Otimizado</h3>
-                <p>Ajustes avançados no sistema para desempenho máximo.</p>
+                <h3>Estabilidade de FPS</h3>
+                <p>Menos travamentos e quedas bruscas, mantendo o jogo estável.</p>
             </div>
             <div class="box">
-                <h3>Menos Input Lag </h3>
-                <p>Redução de latência e resposta mais rápida nos jogos.</p>
+                <h3>Redução do Input Lag</h3>
+                <p>Resposta mais rápida do mouse e do controle para jogos competitivos.</p>
             </div>
             <div class="box">
-                <h3>Configuração Completa</h3>
-                <p>Drivers, BIOS e ajustes finos para melhor performance.</p>
+                <h3>Desempenho Máximo</h3>
+                <p>Ajustes completos no Windows, BIOS e drivers para extrair o melhor do PC.</p>
             </div>
         </div>
     </section>
 
+    <!-- Plano Único -->
     <section class="section container">
-        <h2 class="section-title">Planos de Otimização</h2>
+        <h2 class="section-title"></h2>
         <div class="plans">
             <div class="plan">
-                <h3>Básico</h3>
+                <span class="highlight">OTIMIZAÇÃO COMPLETA</span>
+                <h3></h3>
                 <ul>
-                    <li>✅Otimização do Windows</li>
-                    <li>✅Drivers atualizados</li>
-                    <li>✅Ajustes de desempenho</li>
-                </ul>
-                <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
-            </div>
-
-            <div class="plan">
-                <h3>Avançado</h3>
-                <ul>
-                    <li>✅Tudo do Básico</li>
-                    <li>✅Ajustes de BIOS</li>
-                    <li>✅Redução de latência</li>
-                </ul>
-                <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
-            </div>
-
-            <div class="plan">
-                <h3>Premium</h3>
-                <ul>
-                    <li>✅Tudo do Avançado</li>
-                    <li>✅Ajustes personalizados</li>
-                    <li>✅Suporte pós-otimização</li>
+                    <li>✅ Otimização do Windows</li>
+                    <li>✅ Drivers atualizados</li>
+                    <li>✅ Ajustes de desempenho em jogos</li>
+                    <li>✅ Ajustes na BIOS</li>
+                    <li>✅ Redução avançada de latência</li>
+                    <li>✅ Maior Vida útil dos componentes</li>
+                    <li>✅ Suporte pós-otimização</li>
                 </ul>
                 <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>❗Resultados podem variar conforme hardware e configurações.</p>
-        🔒 Nenhum arquivo pessoal é acessado • Processo 100% seguro
+        <p>🔒 Nenhum arquivo pessoal é acessado • Processo 100% seguro</p>
         <p>💬 Contato exclusivamente via Discord.</p>
     </footer>
 
