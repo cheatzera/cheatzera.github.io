@@ -1,253 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CheatOptimizer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CheatOptimizer</title>
 
-    <!-- Fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo-cheat.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo-cheat.png">
+<style>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
 
-        body {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1920&q=80");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+body {
+    background: linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
+                url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    line-height: 1.6;
+    animation: bgMove 25s infinite alternate ease-in-out;
+}
 
-        a {
-            text-decoration: none;
-        }
+@keyframes bgMove {
+    from { background-position: center top; }
+    to { background-position: center bottom; }
+}
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 20px;
-        }
+/* HERO */
 
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 120px 20px 100px 20px;
+    overflow: hidden;
+}
 
-        .hero-title {
-            font-size: 50px;
-            font-weight: 700;
-            color: #ffffff
-        }
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(0,38,255,0.35) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulseGlow 6s infinite ease-in-out;
+    z-index: -1;
+}
 
-        .hero p {
-            margin-top: 15px;
-            font-size: 18px;
-            color: white;
-        }
+@keyframes pulseGlow {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.75), #0026ff);
-            color: white;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: #ffffff;
+    animation: fadeDown 1s ease forwards;
+}
 
-            .btn:hover {
-                transform: scale(1.05);
-                opacity: 0.9;
-            }
+.hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #e2e8f0;
+    animation: fadeDown 1.4s ease forwards;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 40px;
-            color: white;
-        }
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #0026ff, #2563eb);
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 8px 25px rgba(0,38,255,0.45);
+    animation: fadeDown 1.8s ease forwards;
+}
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 45px rgba(0,38,255,0.7);
+}
 
-        .box {
-            background: rgba(0,0,0,0.6);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+/* ANIMAÇÃO */
 
-            .box:hover {
-                transform: translateY(-5px);
-                border: 2px solid #0026ff;
-            }
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-            .box h3 {
-                margin-bottom: 15px;
-                font-size: 22px;
-                color: #0026ff;
-            }
+/* CONTAINER */
 
-            .box p {
-                color: #cfcfcf;
-            }
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 20px;
+}
 
-        .plans {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
 
-        .plan {
-            background: rgba(0,0,0,0.6);
-            padding: 35px;
-            border-radius: 45px;
-            text-align: center;
-            border: 1px solid #222;
-            position: relative;
-            transition: 0.3s;
-        }
+/* FEATURES */
 
-            .plan:hover {
-                transform: translateY(-5px);
-                border-color: #0026ff;
-            }
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
 
-            .plan h3 {
-                font-size: 24px;
-                margin-bottom: 15px;
-                color: #ffffff;
-            }
+.box {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s;
+}
 
-        .plan-price {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0026ff;
-            margin-bottom: 20px;
-        }
+.box:hover {
+    transform: translateY(-10px);
+    border: 1px solid #2563eb;
+    box-shadow: 0 15px 40px rgba(0,38,255,0.35);
+}
 
-        .plan ul {
-            list-style: none;
-            margin: 25px 0;
-        }
+.box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #2563eb;
+}
 
-            .plan ul li {
-                margin: 10px 0;
-                color: #cfcfcf;
-            }
+.box p {
+    color: #cbd5e1;
+}
 
-        .plan .highlight {
-            background: linear-gradient(135deg, rgba(0,0,0,0.75), #0026ff);
-            color: rgba(0,0,0,0.6);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 14px;
-        }
+/* PLANS */
 
-        .plan .most-sold {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.75), #ff6600);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
 
-        .footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 40px 20px;
-            color: #888;
-            font-size: 14px;
-        }
-    </style>
+.plan {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    padding: 45px;
+    border-radius: 25px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    border-color: #2563eb;
+    box-shadow: 0 20px 50px rgba(0,38,255,0.4);
+}
+
+.highlight {
+    background: linear-gradient(135deg, #0026ff, #2563eb);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.most-sold {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ff6600, #ff8c00);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.plan ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.plan ul li {
+    margin: 12px 0;
+    color: #e2e8f0;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 20px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 42px;
+    }
+}
+
+</style>
 </head>
 <body>
 
-    <!-- Hero -->
-    <section class="hero">
-        <h1 class="hero-title">CheatOptimizer</h1>
-        <p>Mais FPS, menos input lag e desempenho máximo para seus jogos.</p>
-        <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
-    </section>
+<section class="hero">
+    <h1 class="hero-title">CheatOptimizer</h1>
+    <p>Mais FPS, menos input lag e desempenho máximo para seus jogos.</p>
+    <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
+</section>
 
-    <!-- Benefícios -->
-    <section class="section container">
-        <h2 class="section-title">O que fazemos</h2>
-        <div class="features">
-            <div class="box">
-                <h3>Estabilidade de FPS</h3>
-                <p>Menos travamentos e quedas bruscas, mantendo o jogo estável.</p>
-            </div>
-            <div class="box">
-                <h3>Redução do Input Lag</h3>
-                <p>Resposta mais rápida do mouse e do controle para jogos competitivos.</p>
-            </div>
-            <div class="box">
-                <h3>Desempenho Máximo</h3>
-                <p>Ajustes completos no Windows, BIOS e drivers para extrair o melhor do PC.</p>
-            </div>
+<section class="container">
+    <h2 class="section-title">O que fazemos</h2>
+    <div class="features">
+        <div class="box">
+            <h3>Estabilidade de FPS</h3>
+            <p>Menos travamentos e quedas bruscas, mantendo o jogo estável.</p>
         </div>
-    </section>
-
-    <!-- Planos -->
-    <section class="section container">
-        <h2 class="section-title">Planos de Otimização</h2>
-        <div class="plans">
-
-            <!-- Plano Básico -->
-            <div class="plan">
-                <span class="highlight">BÁSICO</span>
-                <ul>
-                    <li>✅ Otimização do Windows</li>
-                    <li>✅ Drivers atualizados</li>
-                    <li>✅ Redução avançada de latência</li>
-                    <li>✅ Ajustes de desempenho em jogos</li>
-                </ul>
-                <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
-            </div>
-
-            <!-- Plano Premium -->
-            <div class="plan">
-                <span class="highlight">PREMIUM</span>
-                <span class="most-sold">⭐ Mais Vendido</span>
-                <ul>
-                    <li>✅ Tudo do Básico</li>
-                    <li>✅ Overclock seguro</li>
-                    <li>✅ Ajustes na BIOS</li>
-                    <li>✅ Maior Vida útil dos componentes</li>
-                </ul>
-                <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
-            </div>
+        <div class="box">
+            <h3>Redução do Input Lag</h3>
+            <p>Resposta mais rápida do mouse e do controle para jogos competitivos.</p>
         </div>
-    </section>
+        <div class="box">
+            <h3>Desempenho Máximo</h3>
+            <p>Ajustes completos no Windows, BIOS e drivers para extrair o melhor do PC.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>❗Resultados podem variar conforme hardware e configurações.</p>
-        <p>🔒 Nenhum arquivo pessoal é acessado • Processo 100% seguro</p>
-        <p>💬 Contato exclusivamente via Discord.</p>
-    </footer>
+<section class="container">
+    <h2 class="section-title">Planos de Otimização</h2>
+    <div class="plans">
+
+        <div class="plan">
+            <div class="highlight">BÁSICO</div>
+            <ul>
+                <li>✅ Otimização do Windows</li>
+                <li>✅ Drivers atualizados</li>
+                <li>✅ Redução avançada de latência</li>
+                <li>✅ Ajustes de desempenho em jogos</li>
+            </ul>
+            <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
+        </div>
+
+        <div class="plan">
+            <div class="highlight">PREMIUM</div>
+            <div class="most-sold">⭐ Mais Vendido</div>
+            <ul>
+                <li>✅ Tudo do Básico</li>
+                <li>✅ Overclock seguro</li>
+                <li>✅ Ajustes na BIOS</li>
+                <li>✅ Maior vida útil dos componentes</li>
+            </ul>
+            <a href="https://discord.gg/ahzGGa8eX7" class="btn">Quero otimizar 🚀</a>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>❗Resultados podem variar conforme hardware e configurações.</p>
+    <p>🔒 Nenhum arquivo pessoal é acessado • Processo 100% seguro</p>
+    <p>💬 Contato exclusivamente via Discord.</p>
+</footer>
 
 </body>
 </html>
